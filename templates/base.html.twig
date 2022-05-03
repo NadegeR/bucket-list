@@ -9,7 +9,7 @@
         <title>{% block title %}Bucket-List ! {% endblock %}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -22,8 +22,8 @@
 
     <header>
         <div class="container">
-            <h1 class="header">
-                <a href="{{ path('main-home') }}" title="Back Home">
+            <h1 class="en-tete">
+                <a href="{{ path('main_home') }}" title="Back Home">
                     <img src="{{ asset('img/logo.svg') }}" alt="Bucket-List logo">
                     Bucket-List
                 </a>
@@ -39,7 +39,7 @@
     </main>
 
     <footer>
-        <div>&copy; Bucket-List{{ "now"|date("Y") }} </div>
+        <div class="container">&copy; Bucket-List{{ "now"|date("Y") }} </div>
     </footer>
 
     </body>

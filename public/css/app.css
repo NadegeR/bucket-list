@@ -3,11 +3,53 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
 }
 .container {
-    max-width: 800px;
+    max-width: 80%;
     margin: auto;
 }
+
+main {
+    flex: 1;
+    padding: 1rem 0;
+    background-color: #FFF1E6;
+}
+main h2{
+    font-weight: lighter;
+}
+
+header{
+    background-color: rgba(0, 128, 128, 0.65);
+}
+
+.en-tete a {
+    font-size: 40px;
+    font-weight: normal;
+}
+.en-tete img {
+    max-width: 50px;
+}
+
+header nav{
+    display: flex;
+}
+
+header nav a {
+    font-size: 18px;
+}
+
+header nav a:hover{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+header a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: medium;
+}
+
 
 nav ul {
     display: flex;
@@ -17,4 +59,15 @@ nav ul {
 
 nav li {
     margin-right: 1rem;
+}
+
+a:hover{
+    color: #5e5e5e;
+}
+
+footer{
+    color: #FFFFFF;
+    text-align: center;
+    background-color: rgba(94, 94, 94, 0.93);
+    padding: 10px;
 }
