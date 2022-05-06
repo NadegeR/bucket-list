@@ -5,9 +5,25 @@
 {% endblock %}
 
 {% block body %}
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Ad adipisci consequuntur corporis cupiditate eius esse ex expedita itaque labore magnam minima nihil nostrum
-        officia porro quos, repudiandae, veritatis.
-        Eligendi, repudiandae?</p>
+    <section class="about">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Ad adipisci consequuntur corporis cupiditate eius esse ex expedita itaque labore magnam minima nihil nostrum
+            officia porro quos, repudiandae, veritatis.
+            Eligendi, repudiandae?</p>
+    </section>
+
+    {% for member in team %}
+        <section class="team">
+        <img src="{{ member.picture }}" alt="{{ member.lastname }}">
+        <div>
+        <h4>{% if member.firstname == "Fabien" %} ❤️{% endif %}
+            {{ member.lastname }} {{ member.firstname }}</h4>
+        <p>Creator of : {{ member.creatorOf }}</p>
+        <p>Date of birth : {{ member.dateOfBirth | date("d-m-Y") }}</p>
+        <p>{{ member.description }}</p>
+        </div>
+        </section>
+    {% endfor %}
+
 {% endblock %}
 

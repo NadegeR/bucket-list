@@ -1,12 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    todo afficher le wish | {{ parent() }}
+    {{ wish.title }} | {{ parent() }}
 {% endblock %}
 
 {% block body %}
-    <h2>todo le titre du wish</h2>
-
-    {# todo afficher toutes les infos du wish #}
+    <h2 class="titre">{{ wish.title }} - [{{ wish.category.name}}]</h2>
+    <p>{{ wish.description }}</p>
+    <p>{{ wish.author }}</p>
+    <p>{{wish.dateCreated|date('d/m/Y')}}</p>
 {% endblock %}
 

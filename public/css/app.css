@@ -71,3 +71,84 @@ footer{
     background-color: rgba(94, 94, 94, 0.93);
     padding: 10px;
 }
+
+.team{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border-bottom: black solid 1px;
+}
+
+.team img{
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.about p {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.wish-list a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    color: rgba(94, 94, 94, 0.93);
+}
+.wish-list article{
+    padding-top: 10px;
+}
+
+.wish-list a:hover{
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+    color: #5e5e5e;
+}
+.titre {
+    font-weight: bold;
+    color: #5e5e5e;
+}
+
+label {
+    display: block;
+    color: rgba(94, 94, 94, 0.93);
+    font-weight: bolder;
+    padding: 0.2rem;
+
+}
+
+input,
+textarea,
+select {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 300px;
+    max-width: 50%;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+}
+.flash {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.flash-success {
+    background-color: rgba(73, 210, 210, 0.55);
+    font-style: italic;
+    color: #FFF1E6;
+}
+button{
+    background-color: rgba(0, 128, 128, 0.55);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.cat {
+    font-size: 14px;
+}

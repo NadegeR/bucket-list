@@ -24,13 +24,24 @@
         <div class="container">
             <h1 class="en-tete">
                 <a href="{{ path('main_home') }}" title="Back Home">
-                    <img src="{{ asset('img/logo.svg') }}" alt="Bucket-List logo">
+                    <img src="{{ asset('img/1logo-512.png') }}" alt="Bucket-List logo">
                     Bucket-List
                 </a>
             </h1>
             {% include ('inc/nav.html.twig') %}
         </div>
     </header>
+
+    {# read and display all flash messages #}
+    <div class="container">
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    </div>
 
     <main>
         <div class="container">

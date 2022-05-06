@@ -1,8 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <section>
-        todo:afficher des wishes
+    <section class="wish-list">
+        {% for wish in wishes %}
+            {% if wish.isPublished %}
+            <article>
+                <a href="{{path('wish_details',{'id':wish.id}) }}" title="View details">
+                    {{wish.title}} - <span class="cat">[{{ wish.category.name}}]</span></a>
+            </article>
+            {% endif %}
+        {% endfor %}
     </section>
 {% endblock %}
 
