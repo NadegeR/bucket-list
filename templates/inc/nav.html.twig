@@ -1,15 +1,25 @@
-<nav>
-    <ul>
-        <li><a href="{{ path('main_home') }}" title="Back Home">Home</a></li>
-        <li><a href="{{ path('wish_list') }}" title="All wishes">All wishes</a></li>
-        <li><a href="{{ path('main_aboutUs') }}" title="About us">About Us</a></li>
+<nav class="nav-bar">
+
+    <div class="nav-left">
+        <a href="{{ path('main_home') }}" title="Back Home">Home</a>
+        <a href="{{ path('wish_list') }}" title="All wishes">All wishes</a>
+        <a href="{{ path('main_aboutUs') }}" title="About us">About Us</a>
         {% if app.user %}
-        <li><a href="{{ path('wish_create') }}" title="Create your wish">Add yours !</a></li>
-        <li class="nav-right"><a href="{{ path('app_logout') }}" title="logout">Logout ( {{ app.user.username }}
-                )</a></li>
-        {% else %}
-            <li class="nav-right"><a href="{{ path('app_login') }}" title="login">Login</a> | <a
-                        href="{{ path('app_register') }}" title="register">Register</a></li>
+            <a href="{{ path('wish_create') }}" title="Create your wish">Add yours !</a>
         {% endif %}
-    </ul>
+    </div>
+
+    <div class="nav-right">
+        {% if app.user %}
+        Hello "{{ app.user.username }}" !<a href="{{ path('app_logout') }}" title="logout">Logout </a>
+        {% if is_granted("ROLE_ADMIN") %}
+            <a href="{{ path('admin_dashboard') }}" title="Admin dashboard" id="admin">Admin</a>
+        {% endif %}
+
+        {% else %}
+        <a href="{{ path('app_login') }}" title="login">Login</a> |
+        <a href="{{ path('app_register') }}" title="register">Register</a>
+    </div>
+    {% endif %}
+
 </nav>

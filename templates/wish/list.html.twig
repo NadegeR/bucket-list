@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <h2 class="titre">All Wishes !</h2>
     <section class="wish-list">
         {% for wish in wishes %}
             {% if wish.isPublished %}

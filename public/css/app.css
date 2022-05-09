@@ -18,6 +18,7 @@ main {
 }
 main h2{
     font-weight: lighter;
+    font-size: 35px;
 }
 
 header{
@@ -51,26 +52,28 @@ header a{
     font-size: medium;
 }
 
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
+#admin{
+    color: #5e5e5e;
+    font-weight: bolder;
 }
 
-nav li {
-    margin-right: 1rem;
-}
-
-.nav-right{
-    position: absolute;
-    right: 15%;
-    margin: fill;
+.nav-bar{
     display: flex;
-    gap: 10px;
-    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
     color: #FFFFFF;
+    font-size: 20px;
+
 }
+.nav-left a{
+    margin-right: 15px;
+    font-size: 20px;
+}
+.nav-right a{
+    margin-left: 15px;
+    font-size: 20px;
+}
+
 
 a:hover{
     color: #5e5e5e;
